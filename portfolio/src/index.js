@@ -75,26 +75,43 @@ function tick() {
              /* <h2>It is {new Date().toLocaleTimeString()}.</h2>*/ 
 
 function render() {
-  // let filepath = ".//homeText.txt";
-  // let text = get_text_file(filepath);
+
+  const isDesktop = window.matchMedia("(min-width: 415px)").matches;
+
   const gotHomeText = hometext;
     return (
         <div>
-            <div  style = {{background: "rgb(252, 252, 252)", paddingTop:'20px', paddingBottom:'12px', paddingLeft:'300px', paddingRight:'300px'}}>
+{/* for mobile */}
+            {!isDesktop && (<div  style = {{background: "rgb(252, 252, 252)", paddingTop:'5px', paddingBottom:'3px', paddingLeft:'5px', paddingRight:'5px'}}>
               <a href="/" style={{ color: 'black', fontSize: "70px", textAlign:'center'}}>
                 <div>
                   <img src={logo} style={{height:"15vh", width:"20vw"}}></img>
                 </div>
               </a>
-            </div>
+            </div>)}
+{/* for desktop */}
+            {isDesktop && (<div  style = {{background: "rgb(252, 252, 252)", paddingTop:'20px', paddingBottom:'12px', paddingLeft:'300px', paddingRight:'300px'}}>
+              <a href="/" style={{ color: 'black', fontSize: "70px", textAlign:'center'}}>
+                <div>
+                  <img src={logo} style={{height:"15vh", width:"20vw"}}></img>
+                </div>
+              </a>
+            </div>)}
+            
             <div style={{backgroundImage: `url(${scarf})`, backgroundRepeat:"no-repeat", backgroundSize: "cover", height:"50vh", width:"100vw" , display: "flex", backgroundposition: "center"}}> 
 first
             </div>
-           
-          <div style = {{background: "rgb(238, 236, 204)", paddingTop:'30px', paddingBottom:'45px', paddingLeft:'300px', paddingRight:'300px'}}>
+{/* for mobile */}
+          { !isDesktop && (<div style = {{background: "rgb(238, 236, 204)", paddingTop:'30px', paddingBottom:'45px', paddingLeft:'5px', paddingRight:'5px'}}>
           <h2 style={{font:"24px", fontStyle:"normal", fontFamily:"Avenir Next",textAlign:"center"}}>Our Story</h2>
           <div style={{whiteSpace:"pre-line", fontSize:"16px", fontStyle:"normal",fontWeight:"400",fontFamily:"New York",textAlign:"center",transform:"matrix(1,0,0,1,0,0)", overflowWrap:"break-word"}}>{gotHomeText}</div>
-          </div>
+          </div>)}
+{/* for desktop */}
+            { isDesktop && (<div style = {{background: "rgb(238, 236, 204)", paddingTop:'30px', paddingBottom:'45px', paddingLeft:'300px', paddingRight:'300px'}}>
+          <h2 style={{font:"24px", fontStyle:"normal", fontFamily:"Avenir Next",textAlign:"center"}}>Our Story</h2>
+          <div style={{whiteSpace:"pre-line", fontSize:"16px", fontStyle:"normal",fontWeight:"400",fontFamily:"New York",textAlign:"center",transform:"matrix(1,0,0,1,0,0)", overflowWrap:"break-word"}}>{gotHomeText}</div>
+          </div>)}
+        
           <div style = {{background: "rgb(238, 236, 204)"}}>{grid()}</div>
         </div>
     
@@ -120,36 +137,6 @@ export default function grid() {
     </div>
   );
 }
-// getHomeText = () => {
-//   console.log(myText);
-// } 
-
-
-// const get_text_file =  (filepath) => {
-//   // prefix public dir files with `process.env.PUBLIC_URL`
-//   // see https://create-react-app.dev/docs/using-the-public-folder/
-//   const res =  fetch(`${filepath}`);
-
-//   // check for errors
-//   if (!res.ok) {
-//     throw res;
-//   }
-
-//   return res.text();
-// };
-
-// export function TextFile({ fileName }) {
-//   const [text, setText] = useState(""); // init with an empty string
-
-//   useEffect(() => {
-//     get_text_file(`${fileName}.txt`).then(setText).catch(console.error);
-//   }, [fileName]);
-//   return (
-//     <>
-//       <p>{text}</p>
-//     </>
-//   );
-// }
 
 setInterval(tick, 1000);
 
