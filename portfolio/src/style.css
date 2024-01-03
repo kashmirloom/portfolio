@@ -15,6 +15,17 @@ body {
 html {
   font-size: 62.5%;
 }
+.story{
+background-color: rgb(238, 236, 204);
+padding: 30px 300px 45px;
+}
+
+@media(max-width: 750px){
+    .story{
+        background-color: rgb(238, 236, 204);
+        padding: 30px 5px 45px;
+        }
+}
 
 /* global */
 .container {
@@ -22,6 +33,20 @@ html {
   margin: 0 auto;
   padding: 0 19px;
 }
+
+.aari-container {
+    columns: 2 auto;
+    padding: 0 19px;
+  }
+
+  @media (max-width:450px) {
+    .aari-container {
+        max-width: 800px;
+        padding: 0 19px;
+        columns: auto;
+      }
+  }
+
 .grid-container {
   display: grid;
   height: 50rem;
@@ -31,6 +56,48 @@ html {
   gap: 1.3rem;
   margin-top: 1.3rem;
 }
+@media (max-width: 750px){
+    .grid-container {
+        display: grid;
+        height: 50rem;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'one two four' 'one two-low four-low';
+        gap: 1.3rem;
+        margin-top: 1.3rem;
+      }
+    }
+
+.aari-grid-container {
+    display: block;
+    height: 50rem;      
+    gap: 1.3rem;
+   
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 40px;
+  }
+
+.same-height-images {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 .home-container {
   padding-top: 12rem;
@@ -84,6 +151,15 @@ html {
   transition: all 0.3s ease-in;
 }
 
+.aari-lil-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in;
+  }
+
 
 
 #img1:hover {
@@ -102,7 +178,7 @@ html {
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-@media (max-width:750px) {
+/* @media (max-width:750px) {
   .grid-container {
       height: 500px;
       display: grid;
@@ -114,7 +190,7 @@ html {
       grid-gap: 13px;
       gap: 13px;
   }
-}
+} */
 
 @media (max-width:450px) {
   .main-description {
