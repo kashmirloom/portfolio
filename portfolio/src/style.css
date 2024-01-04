@@ -58,7 +58,7 @@ padding: 30px 300px 45px;
 }
 @media (max-width: 750px){
     .grid-container {
-        display: grid;
+        display: inline;
         height: 50rem;
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
