@@ -5,6 +5,10 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import Aari from './pages/Aari';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import Pashmina from './pages/Pashmina';
+import Silkwool from './pages/Silkwool';
+import Cashmere from './pages/Cashmere';
+import Papermachie from './pages/Papermachie';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +20,10 @@ function render() {
         <Routes>
           <Route path='/' element={<App />} />
           <Route path='/categories/aari' element={<Aari />} />
+          <Route path='/categories/pashmina' element={<Pashmina />} />
+          <Route path='/categories/silk-wool' element={<Silkwool />} />
+          <Route path='/categories/papermachie' element={<Papermachie />} />
+          <Route path='/categories/cashmere' element={<Cashmere />} />
         </Routes>
       </Router>
     </div>);
