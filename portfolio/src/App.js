@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import scarf from './/images/scarf.jpg';
+import poster from './/images/poster.jpg';
 import aari from './/images/catalog/aari.jpg'
 import paper from './/images/catalog/paper.jpg'
 import silk from './/images/catalog/Silkwool.jpg'
@@ -56,17 +57,17 @@ function App() {
     <div>
     <Header/>
                 
-                <div style={{backgroundImage: `url(${scarf})`, backgroundRepeat:"no-repeat", backgroundSize: "cover", height:"50vh", width:"100vw" , display: "flex", backgroundposition: "center"}}> 
+                <div style={{backgroundImage: `url(${poster})`, backgroundRepeat:"no-repeat", backgroundSize: "cover", height:"50vh", width:"100vw" , display: "flex", backgroundposition: "center"}}> 
     first
                 </div>
     {/* for mobile */}
               { !isDesktop && (<div style = {{background: "rgb(238, 236, 204)", paddingTop:'30px', paddingBottom:'45px', paddingLeft:'5px', paddingRight:'5px'}}>
-              <h2 style={{font:"24px", fontStyle:"normal", fontFamily:"Avenir Next",textAlign:"center"}}>Our Story</h2>
+              <h2 style={{font:"24px", fontStyle:"normal", fontSize:"20px",fontFamily:"PT Serif Caption",textAlign:"center"}}>Our Story</h2>
               <div style={{whiteSpace:"pre-line", fontSize:"16px", fontStyle:"normal",fontWeight:"400",fontFamily:"New York",textAlign:"center",transform:"matrix(1,0,0,1,0,0)", overflowWrap:"break-word"}}>{gotHomeText}</div>
               </div>)}
     {/* for desktop */}
                 { isDesktop && (<div className='story'>
-              <h2 style={{font:"24px", fontStyle:"normal", fontFamily:"Avenir Next",textAlign:"center"}}>Our Story</h2>
+              <h2 style={{font:"24px", fontStyle:"normal", fontFamily:"Avenir Next",textAlign:"center"  }}>Our Story</h2>
               <div style={{whiteSpace:"pre-line", fontSize:"16px", fontStyle:"normal",fontWeight:"400",fontFamily:"New York",textAlign:"center",transform:"matrix(1,0,0,1,0,0)", overflowWrap:"break-word"}}>{gotHomeText}</div>
               </div>)}
             
