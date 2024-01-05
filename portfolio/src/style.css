@@ -47,6 +47,20 @@ padding: 30px 300px 45px;
       }
   }
 
+.poster {
+    background-Repeat:no-repeat;
+    background-Size: cover;
+    height:35vw;
+    width:100vw;
+    display: flex;
+    background-position: center;
+}
+@media (max-width: 750px){
+    .poster {
+        height:35vw;
+      }
+    }
+
 .grid-container {
   display: grid;
   height: 50rem;

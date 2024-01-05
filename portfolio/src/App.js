@@ -57,7 +57,7 @@ function App() {
     <div>
     <Header/>
                 
-                <div style={{backgroundImage: `url(${poster})`, backgroundRepeat:"no-repeat", backgroundSize: "cover", height:"50vh", width:"100vw" , display: "flex", backgroundposition: "center"}}> 
+                <div className='poster' style={{backgroundImage: `url(${poster})`}}> 
     first
                 </div>
     {/* for mobile */}
